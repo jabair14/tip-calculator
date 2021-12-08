@@ -1,62 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
-    
-    
-    <title>Lee & Jabair's Tip Calculator</title>
-</head>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lee & Jabair's Tip Calculator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<body>
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tip Calculator</a>
+				<nav>
+					<ul>
+						<li><a href="https://github.com/jabair14">Jabair's Github</a></li>
+						<li><a href="https://github.com/leemichalee">Lee's Github</a></li>
+					</ul>
+				</nav>
+			</header>
 
-    <div class="uk-background-muted uk-container-medium">
-        
-        <h1> Tip Calculator</h1>
-        <div class="tip-calculator">
-            
-            
-            <input type="integer" class="uk-form-large" id="total">
-           
-            
-            <table>
-                <tr>
-                    <td>
-                        <input class ="uk-button uk-button-primary" type="button" value="15%" id='fifteen' >
-                    </td>
-                    <td>
-                        <input class ="uk-button uk-button-primary" type="button" value="18%" id='eighteen'>
-                            
-                    
-                    </td>
-                    <tr>
-                    <td>
-                        <input class ="uk-button uk-button-primary" type="button" value="20%" id='twenty'>
-                    </td>
-                    <td>
-                        <input class ="uk-button uk-button-primary" type="button" value="22%" id='twentytwo'>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td>
-                        <input type="integer" class="uk-input" id="custom" placeholder="custom tip">
-                    </td>
-                    </tr>
-                </tr>
-            </table>
-        </div>
-    
-        <h2> Amount Due: </h2>
-        <h3 id='amountDue'></h3>
-    </div>
-   
+		<!-- Wrapper -->
+			<div id="wrapper">
 
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
 
+							<!-- Form -->
+								<section>
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<input type="integer" name="demo-name" id="total" value="" placeholder="$" />
+												<br><input type="integer" id="custom" placeholder="Custom Tip"> 
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<input type="button"  id="fifteen"value="15%">
+												<input type="button"  id="eighteen"value="18%">
+												<input type="button"  id="twenty"value="20%">
+												<input type="button"  id="twentytwo"value="22%">
+												<h2> Amount Due: </h2>
+        										<h3 id='amountDue'></h3>
+											</div>
+										</div>
+								</section>
+			</div>
 
-
-    <script src="app.js"></script>
-</body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="app.js"></script>
+	</body>
 </html>
