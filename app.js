@@ -12,10 +12,33 @@ document.getElementById("total").onchange = function(){
 
     document.getElementById('fifteen').onclick = function(){
         let amountDue = total*1.15
-        console.log(amountDue)
-        document.getElementsById('fifteen')
-        document.createElement('h3')
-        h3.innerHTML = amountDue
+        let amountDueNumber = document.getElementById('amountDue')
+        amountDueNumber.innerHTML = amountDue.toFixed(2)
+    }
+
+    document.getElementById('eighteen').onclick = function(){
+        let amountDue = total*1.18
+        let amountDueNumber = document.getElementById('amountDue')
+        amountDueNumber.innerHTML = amountDue
+    }
+
+    document.getElementById('twenty').onclick = function(){
+        let amountDue = total*1.2
+        let amountDueNumber = document.getElementById('amountDue')
+        amountDueNumber.innerHTML = amountDue
+    }
+
+    document.getElementById('twentytwo').onclick = function(){
+        let amountDue = total*1.22
+        let amountDueNumber = document.getElementById('amountDue')
+        amountDueNumber.innerHTML = amountDue
+    }
+
+    document.getElementById('custom').onchange = function(){
+        let customTip = Number(document.getElementById('custom').value)/100+1
+        let amountDue = total*customTip
+        let amountDueNumber = document.getElementById('amountDue')
+        amountDueNumber.innerHTML = amountDue.toFixed(2)
     }
 
     // amountDue = document.createElement('h3')
