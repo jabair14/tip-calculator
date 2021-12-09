@@ -11,38 +11,73 @@ document.getElementById("total").onchange = function(){
     // Basic Functionality 
 
     document.getElementById('fifteen').onclick = function(){
-        if (typeof total === 'number'){
+       // console.log(total)
+        //localStorage.setItem('total', total)
+        //localStorage.getItem(total)
+        //console.log(totalCheck)
+        // amountDue = total*1.15
+        // let amountDueNumber = document.getElementById('amountDue')
+        // amountDueNumber.innerHTML = total
+
+        
+        // if (typeof(total) === 'number'){
+        //let amountDueH2= document.getElementById("h2Total")
+        //let tipH2= document.getElementById("h2Tip")
         let amountDue = total*1.15
         let amountDueNumber = document.getElementById('amountDue')
+        let tipDue = total*.15
+        let tipDueNumber = document.getElementById('tipDue')
+        tipDueNumber.innerHTML = tipDue.toFixed(2)
         amountDueNumber.innerHTML = amountDue.toFixed(2)
-        }
-        else   {
-            alert('not a number')
-        }
+        //let amountDueText = document.createTextNode(amountDue.toFixed(2));
+        //let tipText = document.createTextNode(tipDue.toFixed(2));
+        //amountDueH2.appendChild(amountDueText);
+        //tipH2.appendChild(tipText);
+
+
+
+
+        // }
+        // else if  (typeof(total) !== 'number') {
+        //     alert('total must be a number')
+        // }
     }
 
     document.getElementById('eighteen').onclick = function(){
         let amountDue = total*1.18
         let amountDueNumber = document.getElementById('amountDue')
+        let tipDue = total*.18
+        let tipDueNumber = document.getElementById('tipDue')
+        tipDueNumber.innerHTML = tipDue.toFixed(2)
         amountDueNumber.innerHTML = amountDue.toFixed(2)
     }
 
     document.getElementById('twenty').onclick = function(){
         let amountDue = total*1.2
         let amountDueNumber = document.getElementById('amountDue')
+        let tipDue = total*.2
+        let tipDueNumber = document.getElementById('tipDue')
+        tipDueNumber.innerHTML = tipDue.toFixed(2)
         amountDueNumber.innerHTML = amountDue.toFixed(2)
     }
 
     document.getElementById('twentytwo').onclick = function(){
         let amountDue = total*1.22
         let amountDueNumber = document.getElementById('amountDue')
+        let tipDue = total*.22
+        let tipDueNumber = document.getElementById('tipDue')
+        tipDueNumber.innerHTML = tipDue.toFixed(2)
         amountDueNumber.innerHTML = amountDue.toFixed(2)
     }
 
     document.getElementById('custom').onchange = function(){
         let customTip = Number(document.getElementById('custom').value)/100+1
+        let customTipForTip = customTip-1
         let amountDue = total*customTip
         let amountDueNumber = document.getElementById('amountDue')
+        let tipDue = total* customTipForTip
+        let tipDueNumber = document.getElementById('tipDue')
+        tipDueNumber.innerHTML = tipDue.toFixed(2)
         amountDueNumber.innerHTML = amountDue.toFixed(2)
     }
 
