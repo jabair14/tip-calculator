@@ -11,9 +11,14 @@ document.getElementById("total").onchange = function(){
     // Basic Functionality 
 
     document.getElementById('fifteen').onclick = function(){
+        if (typeof total === 'number'){
         let amountDue = total*1.15
         let amountDueNumber = document.getElementById('amountDue')
         amountDueNumber.innerHTML = amountDue.toFixed(2)
+        }
+        else   {
+            alert('not a number')
+        }
     }
 
     document.getElementById('eighteen').onclick = function(){
@@ -64,7 +69,32 @@ document.getElementById("total").onchange = function(){
         node.appendChild(textnode);
         document.getElementById("bills-list").appendChild(node);
     })
+
+    const updateButton = document.getElementById('update-last')
     
+    updateButton.addEventListener('click', function(){
+
+        savedBills.pop()
+        savedBills.push(amountDue.innerHTML)
+        localStorage.setItem('save', savedBills)
+        let list = document.getElementById('bills-list');
+        list.removeChild(list.lastElementChild)
+        var node = document.createElement("li");
+        var textnode = document.createTextNode(amountDue.innerHTML);
+        node.appendChild(textnode);
+        document.getElementById("bills-list").appendChild(node)
+    })
+    
+    const deleteButton = document.getElementById('delete-from-list')
+
+    deleteButton.addEventListener('click', function(){
+
+        savedBills.pop()
+        localStorage.setItem('save',savedBills)
+        let list = document.getElementById('bills-list');
+        list.removeChild(list.lastElementChild)
+
+    })
     // document.getElementById('add-to-list').onClick = function(){
     //     const str = JSON.stringify(savedBills)
     //     localStorage.setItem('bills', str);
